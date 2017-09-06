@@ -118,6 +118,8 @@ export var Draggable = Evented.extend({
 
 		DomEvent.on(document, MOVE[e.type], this._onMove, this);
 		DomEvent.on(document, END[e.type], this._onUp, this);
+
+		DomEvent.preventDefault(e);
 	},
 
 	_onMove: function (e) {
